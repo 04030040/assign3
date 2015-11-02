@@ -179,8 +179,9 @@ treasurePosY=floor(random(height-90))+50;
 
 //enemy1PosX=0;
 enemy1PosX=(-enemySize)*2;
-//enemy1PosY=floor(random(height-90))+50;
-enemy1PosY=height/2-enemySize/2;
+enemy1PosY=floor(random(height-90))+50;
+//enemy1PosY=height/2-enemySize/2;
+
 
 fighterPosX=floor(random(width-90))+50;
 fighterPosY=floor(random(height-90))+50;
@@ -300,7 +301,7 @@ println("i=", i);
 
 switch(gameLevel){
   case '1':
-  enemy1PosY=floor(random(height-90))+50;
+
 if (enemy1PosX<(width+7*(enemySize+10))){
 while (i<5){
 image (enemyImg, enemy1PosX-i*(enemySize+10), enemy1PosY);
@@ -314,12 +315,13 @@ image (enemyImg, enemy1PosX-i*(enemySize+10), enemy1PosY);
 }else{
 gameLevel='2';
 enemy1PosX=(-enemySize)*2;
+enemy1PosY=floor(random(height-400))+50;
 }
   break;
   
   case '2':
   println("gameLevel='2'");
-  enemy1PosY=floor(random(height-400))+50;
+
   if (enemy1PosX<(width+7*(enemySize+10))){
 while (i<5){
 image (enemyImg, enemy1PosX-i*(enemySize+10), enemy1PosY-i*15);
@@ -333,12 +335,13 @@ image (enemyImg, enemy1PosX-i*(enemySize+10), enemy1PosY-i*15);
 }else{
 gameLevel='3';
 enemy1PosX=(-enemySize)*2;
+enemy1PosY=floor(random(height-150))+50;
 }
   break;
   
   case '3':
     println("gameLevel='3'");
-    enemy1PosY=floor(random(height-150))+50;
+
     if (enemy1PosX<(width+7*(enemySize+10))){
 image (enemyImg, enemy1PosX-0*(enemySize+10), enemy1PosY-0*40);
 image (enemyImg, enemy1PosX-1*(enemySize+10), enemy1PosY-1*40);
@@ -354,6 +357,7 @@ image (enemyImg, enemy1PosX-4*(enemySize+10), enemy1PosY-0*40);
 }else{
 gameLevel='1';
 enemy1PosX=(-enemySize)*2;
+enemy1PosY=floor(random(height-90))+50;
 }
 /*
   if (enemy1PosX<(width+7*(enemySize+10))){
