@@ -300,6 +300,7 @@ println("i=", i);
 
 switch(gameLevel){
   case '1':
+  enemy1PosY=floor(random(height-90))+50;
 if (enemy1PosX<(width+7*(enemySize+10))){
 while (i<5){
 image (enemyImg, enemy1PosX-i*(enemySize+10), enemy1PosY);
@@ -318,6 +319,7 @@ enemy1PosX=(-enemySize)*2;
   
   case '2':
   println("gameLevel='2'");
+  enemy1PosY=floor(random(height-400))+50;
   if (enemy1PosX<(width+7*(enemySize+10))){
 while (i<5){
 image (enemyImg, enemy1PosX-i*(enemySize+10), enemy1PosY-i*15);
@@ -336,6 +338,7 @@ enemy1PosX=(-enemySize)*2;
   
   case '3':
     println("gameLevel='3'");
+    enemy1PosY=floor(random(height-150))+50;
     if (enemy1PosX<(width+7*(enemySize+10))){
 image (enemyImg, enemy1PosX-0*(enemySize+10), enemy1PosY-0*40);
 image (enemyImg, enemy1PosX-1*(enemySize+10), enemy1PosY-1*40);
