@@ -292,16 +292,11 @@ enemy1PosY-=enemySpeedY;
 }
 */
 
-// align 5 enemy to straight line
-
-
+// align enemy
 println("i=", i);
-
-
-
 switch(gameLevel){
   case '1':
-
+//level 1
 if (enemy1PosX<(width+7*(enemySize+10))){
 while (i<5){
 image (enemyImg, enemy1PosX-i*(enemySize+10), enemy1PosY);
@@ -313,13 +308,15 @@ image (enemyImg, enemy1PosX-i*(enemySize+10), enemy1PosY);
   enemy1PosX=enemy1PosX+3;
   i=0;
 }else{
+  //after level 1, go to level 2
 gameLevel='2';
 enemy1PosX=(-enemySize)*2;
-enemy1PosY=floor(random(height-400))+50;
+enemy1PosY=floor(random(height-150))+50;
 }
   break;
   
   case '2':
+  //level 2
   println("gameLevel='2'");
 
   if (enemy1PosX<(width+7*(enemySize+10))){
@@ -333,6 +330,7 @@ image (enemyImg, enemy1PosX-i*(enemySize+10), enemy1PosY-i*15);
   enemy1PosX=enemy1PosX+3;
   i=0;
 }else{
+    //after level 2, go to level 3
 gameLevel='3';
 enemy1PosX=(-enemySize)*2;
 enemy1PosY=floor(random(height-150))+50;
@@ -340,6 +338,7 @@ enemy1PosY=floor(random(height-150))+50;
   break;
   
   case '3':
+  //level 3
     println("gameLevel='3'");
 
     if (enemy1PosX<(width+7*(enemySize+10))){
@@ -355,6 +354,7 @@ image (enemyImg, enemy1PosX-4*(enemySize+10), enemy1PosY-0*40);
     println("enemy1PosY=", enemy1PosY);
   enemy1PosX=enemy1PosX+3;
 }else{
+    //after level 3, go to level 1
 gameLevel='1';
 enemy1PosX=(-enemySize)*2;
 enemy1PosY=floor(random(height-90))+50;
