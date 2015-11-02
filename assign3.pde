@@ -179,7 +179,7 @@ treasurePosY=floor(random(height-90))+50;
 
 //enemy1PosX=0;
 enemy1PosX=(-enemySize)*2;
-enemy1PosY=floor(random(height-90))+50;
+enemy1PosY=floor(random(height-120))+50;
 //enemy1PosY=height/2-enemySize/2;
 
 
@@ -311,7 +311,7 @@ image (enemyImg, enemy1PosX-i*(enemySize+10), enemy1PosY);
   //after level 1, go to level 2
 gameLevel='2';
 enemy1PosX=(-enemySize)*2;
-enemy1PosY=floor(random(height-150))+50;
+enemy1PosY=floor(random(height-300))+140;
 }
   break;
   
@@ -333,7 +333,7 @@ image (enemyImg, enemy1PosX-i*(enemySize+10), enemy1PosY-i*15);
     //after level 2, go to level 3
 gameLevel='3';
 enemy1PosX=(-enemySize)*2;
-enemy1PosY=floor(random(height-150))+50;
+enemy1PosY=floor(random(height-260))+100;
 }
   break;
   
@@ -357,7 +357,7 @@ image (enemyImg, enemy1PosX-4*(enemySize+10), enemy1PosY-0*40);
     //after level 3, go to level 1
 gameLevel='1';
 enemy1PosX=(-enemySize)*2;
-enemy1PosY=floor(random(height-90))+50;
+enemy1PosY=floor(random(height-120))+50;
 }
 /*
   if (enemy1PosX<(width+7*(enemySize+10))){
